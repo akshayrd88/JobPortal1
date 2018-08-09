@@ -1,0 +1,28 @@
+<div class="container">
+    <br>
+    <h1>Post Job</h1><br>
+    <div class="form-group">
+        <form name="registerForm" novalidate>
+            <div class="form-group">
+                <label> Job title:</label>
+                <input class="form-control" type="text" ng-model="newPost.title" required>
+                <br>
+                <label> Job description:</label>
+                <input class="form-control" type="text" ng-model="newPost.description" required>
+                <br>
+                <label> Keywords:</label>
+                <input class="form-control" type="text" ng-model="newPost.keywords" required>
+                <br>
+                <label>Location:</label>
+                <input class="form-control" type="text" ng-model="newPost.location" required>
+                <br>
+
+
+            </div>
+            
+            <br>
+            <br>
+            <button class="btn btn-primary" ng-click="post()" ng-disabled="registerForm.$invalid">Save Details</button>
+        </form>
+    </div>
+</div>

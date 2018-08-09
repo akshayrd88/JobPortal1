@@ -1,0 +1,63 @@
+<div>
+    <div>
+Logged In As:{{headerName}}
+</div>
+</div>
+<div class="container-fluid">
+        
+    <div class="row">
+    <div class="col p-3 mb-2 bg-light text-dark">
+    <h2>Search Jobs</h2><button class="animated flipInY  btn btn-default" type="button" ng-click="status_res()">Profile View</button>
+    <form class="form-horizontal">
+        <div class="form-group">
+                Search by title:
+            <input class="form-control" type="text" id="username" ng-model="userSearch.title">
+            <br>
+        </div>
+        <div class="form-group">
+                Search by keywords:
+            <input class="form-control" type="text" id="username" ng-model="userSearch.keywords">
+            <br>
+        </div>
+        <div class="form-group">
+                Search by location:
+            <input class="form-control" type="text" id="username" ng-model="userSearch.location">
+            <br>
+        </div>
+
+        
+        <button class="btn btn-default" type="button" ng-click="search()">Search</button>
+        <button class="btn btn-default" type="button" ng-click="reset()">Reset</button>
+
+    </form>
+</div>
+    <br>
+<div class="col-9 ">
+        <table class="table ">
+                <thead>
+                  <tr>
+                    
+                    <th scope="col">Job Title</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">location</th>
+                    <th scope="col">Save Job</th>
+                    <th scope="col">Apply Job</th>
+                    
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr ng-repeat="res in result">            
+                    
+                    <td>{{res.title}}</td>
+                    <td>{{res.description}}</td>
+                    <td>{{res.location}}</td>
+                    <td><button id="{{res._id}}"  ng-class="user.saved.includes(res._id)?'btn btn-success':'btn btn-outline-secondary'" type="button" ng-value="res" ng-model="app.sjob" ng-click="sjob($event)">Save Job</button></td>
+                    <td><button id="{{res._id}}" ng-class="user.applied.includes(res._id)?'btn btn-success':'btn btn-outline-secondary'" type="button" ng-value="res" ng-model="app.apply" ng-click="apply($event)">Apply</button></td>
+                    
+                </tr>
+                  
+                </tbody>
+              </table>
+            </div>
+</div>
+</div>

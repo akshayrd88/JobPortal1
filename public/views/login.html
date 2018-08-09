@@ -1,0 +1,16 @@
+<div class="container" >
+    <h2 >Login</h2>
+    <form class="form-horizontal">
+        <div class="form-group" > 
+    Username: <input class="form-control" type="text" id="username" ng-model="authform.username" >  <br>
+</div>    
+<div class="form-group">
+    Password: <input class="form-control" type="password" id="password" ng-model="authform.password">  <br>
+<div style="color:red;">{{wrong}}</div>
+</div>
+   <button class="btn btn-default" type="button" ng-click="submit()">Login</button>
+   <button class="btn btn-default" type="button" ng-click="signup()">SignUp</button>
+
+</form>
+
+ </div>

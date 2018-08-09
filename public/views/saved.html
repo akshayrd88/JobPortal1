@@ -1,0 +1,29 @@
+<h1>Saved Jobs</h1>
+<button  class="btn btn-primary" type="button"   ng-click="app_result()">View Saved Jobs</button>
+<br>
+<br>
+
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+
+                <th scope="col">Job Title</th>
+                <th scope="col">Description</th>
+                <th scope="col">location</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="res in jobs">
+
+                <td>{{res.title}}</td>
+                <td>{{res.description}}</td>
+                <td>{{res.location}}</td>
+
+
+            </tr>
+
+        </tbody>
+    </table>
+</div>

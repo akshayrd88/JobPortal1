@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="form-group">
+        <form name="registerForm" novalidate>
+            <div class="form-group">
+                <label> Username:</label>
+                <input class="form-control" type="text" ng-model="newUser.username" required>
+                <br>
+                <label> Password:</label>
+                <input class="form-control" type="text" ng-model="newUser.password" required>
+                <br>
+                <label> Email:</label>
+                <input class="form-control" type="text" ng-model="newUser.email" required>
+                <br>
+                <label>Location:</label>
+                <input class="form-control" type="text" ng-model="newUser.location" required>
+                <br>
+                <label>Phone:</label>
+                <input class="form-control" type="text" ng-model="newUser.phone" required>
+                <br>
+                <label> User Type:</label>
+            
+            </div>
+            <select  required ng-model="newUser.usertype">
+                
+                <option  type ="text" value="Company" name="usertype"  ng-value="'company'" >Company</option>
+                <option value="Job-Seeker" name="usertype"  ng-value="'jobseeker'" >Job-Seeker</option>
+            </select>
+            <br><br>
+            <button class="btn btn-primary" ng-click="reg()" ng-disabled="registerForm.$invalid">Save Details</button>
+        </form>
+    </div>
+</div>
